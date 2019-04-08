@@ -1,13 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { fetchProblems } from "../API";
+import SectionInfo from "../components/sectionInfo/SectionInfo";
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  height: 800px;
-  width: 100%;
 `;
 
 class Practice extends React.Component {
@@ -19,7 +17,6 @@ class Practice extends React.Component {
   };
 
   componentDidMount() {
-    debugger;
     fetchProblems().then(response =>
       this.setState({
         sectionId: response.sectionId,
@@ -29,8 +26,13 @@ class Practice extends React.Component {
       })
     );
   }
+
   render() {
-    return <Container />;
+    return (
+      <Container>
+        <SectionInfo />
+      </Container>
+    );
   }
 }
 
