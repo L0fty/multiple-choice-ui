@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.section`
-  width: 100%;
-  height: 100px;
+  width: 100vw;
+  height: 8vh;
   display: flex;
   bottom: 0;
   left: 0;

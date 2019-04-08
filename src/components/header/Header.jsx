@@ -1,13 +1,29 @@
-// import React from "react";
+import React from "react";
 // import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
   display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
+  width: 100vw;
+  height: 8vh;
   background-color: ${props => props.theme.primary};
 `;
 
-export default StyledHeader;
+const AppName = styled.span`
+  font-size: 5vh;
+  color: ${props => props.theme.logo};
+  margin-left: 16px;
+  padding: 1vh 16px;
+  font-weight: 800;
+  font-style: italic;
+`;
+
+const Header = () => {
+  return (
+    <StyledHeader>
+      <AppName>Rapid</AppName>
+    </StyledHeader>
+  );
+};
+
+export default Header;

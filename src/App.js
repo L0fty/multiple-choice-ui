@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${props => props.theme.body};
     margin: 0px;
+    color: ${props => props.theme.font};
     }
 `;
 
@@ -16,7 +17,7 @@ class App extends Component {
     return (
       <ThemeProvider theme={{ ...darkTheme }}>
         <div className="App">
-          <Header />
+          <Header>Rapid</Header>
           <Practice />
           <GlobalStyle />
         </div>
