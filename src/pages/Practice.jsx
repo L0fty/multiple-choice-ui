@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { fetchProblems } from "../API";
 import SectionInfo from "../components/sectionInfo/SectionInfo";
-import { QuestionContainer } from "../components/question/Question";
+import Question from "../components/question/Question";
 import { ProblemSelector } from "../components/problemSelector/ProblemSelector";
-import { SideContainer } from "../components/sideContainer/SideContainer";
+import Folder from "../components/folder/Folder";
 
 const Container = styled.div`
   display: flex;
@@ -42,12 +42,14 @@ class Practice extends React.Component {
     } = this.state;
 
     const problemData = problems[selectedProblem] || {};
-
     return (
       <Container>
-        <ProblemSelector />
-        <QuestionContainer question={problemData.question} />
-        <SideContainer
+        <ProblemSelector problems={problems} />
+        <Question
+          question={problemData.question}
+          problemNumber={selectedProblem}
+        />
+        <Folder
           choices={problemData.choices}
           answer={problemData.answer}
           solution={problemData.solution}
