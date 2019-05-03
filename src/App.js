@@ -9,7 +9,10 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme.body};
     margin: 0px;
     color: ${props => props.theme.font};
-    }
+  }
+  button {
+    all: unset;
+  }
 `;
 
 class App extends Component {
