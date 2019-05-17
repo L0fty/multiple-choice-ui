@@ -7,7 +7,7 @@ import Choice from "./Choice";
 const Container = styled.section`
   width: 40vw;
   margin: 1.5vh 0 1.5vh 10px;
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.dim};
   height: 81vh;
 `;
 
@@ -51,7 +51,10 @@ class Folders extends React.Component {
             Section
           </Tab>
         </TabGroup>
-        <Choice />
+        <Choice selected={true} option={0} index={0} />
+        <Choice selected={true} option={0} index={1} />
+        <Choice selected={false} option={0} index={2} />
+        <Choice selected={false} option={0} index={3} />
       </Container>
     );
   }

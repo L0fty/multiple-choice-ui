@@ -1,26 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 
-const OptionContainer = styled.div`
-  background-color: ${props => props.theme.body};
+const OptionContainer = styled.button`
+  background-color: ${props => props.theme.dark};
   height: 60px;
-  width: 95%;
-  margin: 10px auto;
+  width: 85%;
+  margin: 20px auto 5px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  &:hover {
+    background-color: ${props => props.theme.light};
+    color: ${props => props.theme.lightest};
+  }
 `;
 
-const Circle = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: ${props =>
-    props.selected ? props.theme.primary : props.theme.logo};
+const ColorBar = styled.div`
+  background-color: ${props => props.theme.complement};
+  height: 60px;
+  width: 4px;
+  border-radius: 1px;
 `;
 
-const Choice = (selected, option) => {
-  debugger;
+const Choice = props => {
+  const { selected, option, index } = props;
+  const label = index + 1;
   return (
-    <OptionContainer>
-      <Circle selected={false} />
+    <OptionContainer selected={selected}>
+      {selected && <ColorBar />} {label + ": " + option}
     </OptionContainer>
   );
 };

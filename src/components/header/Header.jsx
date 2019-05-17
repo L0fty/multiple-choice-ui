@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
 
 const AppName = styled.span`
   font-size: 5vh;
-  color: ${props => props.theme.logo};
+  color: ${props => props.theme.lightest};
   margin-left: 16px;
   padding: 1vh 16px;
   font-weight: 800;

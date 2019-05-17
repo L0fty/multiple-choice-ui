@@ -6,9 +6,9 @@ import Header from "./components/header/Header";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${props => props.theme.body};
+    background-color: ${props => props.theme.dark};
     margin: 0px;
-    color: ${props => props.theme.font};
+    color: ${props => props.theme.lighter};
   }
   button {
     all: unset;

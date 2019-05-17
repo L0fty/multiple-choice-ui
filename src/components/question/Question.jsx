@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const QuestionContainer = styled.section`
   margin: 1.5vh 10px;
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.dim};
   width: 50vw;
   height: 81vh;
   display: flex;

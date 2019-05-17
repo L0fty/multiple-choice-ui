@@ -8,7 +8,7 @@ const Container = styled.section`
   bottom: 0;
   left: 0;
   position: fixed;
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.dim};
 `;
 
 const SectionInfo = (id, name, number) => {

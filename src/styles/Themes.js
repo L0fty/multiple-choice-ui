@@ -1,14 +1,14 @@
 const darkTheme = {
   primary: "hsl(165,82%,51%)",
-  body: "hsl(0,0%,19%)",
-  background: "hsl(0,0%,26%)",
-  font: "hsl(0,0%,80%)",
-  logo: "hsl(0,0%,100%)",
-  success: "hsl(149,75%,39%)",
-  error: "hsl(4,86%,58%)",
-  icon: "hsl(0,0%,65%)",
-  listHighlight: "hsl(0,0%,38%)",
-  unselectedIcon: "hsl(0,0%,12%)"
+  secondary: "hsl(165,100%,87%)",
+  complement: "hsl(345,82%,51%)",
+  dark: "hsl(0,0%,19%)",
+  dim: "hsl(0,0%,26%)",
+  light: "hsl(0,0%,37%)",
+  lighter: "hsl(0,0%,75%)",
+  lightest: "hsl(0,0%,95%)",
+  success: "hsl(105,82%,51%)",
+  error: "hsl(347,100%,33%)"
 };
 
 export default darkTheme;
