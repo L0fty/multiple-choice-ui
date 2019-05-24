@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${props => props.theme.dark};
     margin: 0px;
-    color: ${props => props.theme.lighter};
+    color: ${props => props.theme.primaryFont};
   }
   button {
     all: unset;

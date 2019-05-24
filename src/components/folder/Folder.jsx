@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Tab from "./Tab";
-import Choice from "./Choice";
+import MultipleChoice from "./MultipleChoice";
 
 const Container = styled.section`
   width: 40vw;
@@ -24,11 +24,16 @@ class Folders extends React.Component {
   };
 
   state = {
-    selectedTab: "Answer"
+    selectedTab: "Answer",
+    selectedChoice: null
   };
 
+  handleChoiceClick = choice => {
+    this.setState({selectedChoice: choice});
+  }
+
   render() {
-    const { selectedTab } = this.state;
+    const { selectedTab, selectedChoice } = this.state;
     return (
       <Container>
         <TabGroup>
@@ -51,10 +56,7 @@ class Folders extends React.Component {
             Section
           </Tab>
         </TabGroup>
-        <Choice selected={true} option={0} index={0} />
-        <Choice selected={true} option={0} index={1} />
-        <Choice selected={false} option={0} index={2} />
-        <Choice selected={false} option={0} index={3} />
+        <MultipleChoice selected={selectedChoice} handleClick={this.handleChoiceClick} />
       </Container>
     );
   }
