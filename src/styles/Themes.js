@@ -1,5 +1,6 @@
 const darkTheme = {
   primary: "hsl(165,82%,51%)",
+  darkPrimary: "hsl(165,82%,41%)",
   primaryFont: "hsl(0,0%,95%)",
   secondary: "hsl(165,100%,87%)",
   complement: "hsl(345,82%,51%)",

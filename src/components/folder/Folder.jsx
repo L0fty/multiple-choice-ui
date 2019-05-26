@@ -9,6 +9,7 @@ const Container = styled.section`
   margin: 1.5vh 0 1.5vh 10px;
   background-color: ${props => props.theme.dim};
   height: 81vh;
+  position: relative;
 `;
 
 const TabGroup = styled.div`
@@ -29,8 +30,8 @@ class Folders extends React.Component {
   };
 
   handleChoiceClick = choice => {
-    this.setState({selectedChoice: choice});
-  }
+    this.setState({ selectedChoice: choice });
+  };
 
   render() {
     const { selectedTab, selectedChoice } = this.state;
@@ -56,7 +57,10 @@ class Folders extends React.Component {
             Section
           </Tab>
         </TabGroup>
-        <MultipleChoice selected={selectedChoice} handleClick={this.handleChoiceClick} />
+        <MultipleChoice
+          selected={selectedChoice}
+          handleClick={this.handleChoiceClick}
+        />
       </Container>
     );
   }
