@@ -12,6 +12,18 @@ export const fetchProblems = () =>
           answer: 0.58,
           solution: "a solution to your problem will go here"
         }
+      ],
+      sections: [
+        {
+          sectionId: "IdNumber",
+          sectionName: "Mock Probability Section Name",
+          sectionNumber: 1
+        },
+        { sectionId: "2", sectionName: "mock", sectionNumber: 2 },
+        { sectionId: "3", sectionName: "fake", sectionNumber: 3 },
+        { sectionId: "4", sectionName: "not real", sectionNumber: 4 },
+        { sectionId: "5", sectionName: "fraud", sectionNumber: 5 },
+        { sectionId: "6", sectionName: "imposter", sectionNumber: 6 }
       ]
     };
     resolve(data);

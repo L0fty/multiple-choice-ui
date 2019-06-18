@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Tab from "./Tab";
 import MultipleChoice from "./MultipleChoice";
+import Solution from "./Solution";
+import SectionSelector from "./SectionSelector";
 
 const Container = styled.section`
   width: 40vw;
@@ -21,7 +23,8 @@ class Folders extends React.Component {
   static propTypes = {
     choices: PropTypes.array,
     answer: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    solution: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    solution: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    sections: PropTypes.array
   };
 
   state = {
@@ -35,6 +38,7 @@ class Folders extends React.Component {
 
   render() {
     const { selectedTab, selectedChoice } = this.state;
+    const { sections, sectionId } = this.props;
     return (
       <Container>
         <TabGroup>
@@ -57,10 +61,23 @@ class Folders extends React.Component {
             Section
           </Tab>
         </TabGroup>
-        <MultipleChoice
-          selected={selectedChoice}
-          handleClick={this.handleChoiceClick}
-        />
+        {
+          {
+            Answer: (
+              <MultipleChoice
+                selected={selectedChoice}
+                handleClick={this.handleChoiceClick}
+              />
+            ),
+            Solution: <Solution solution={this.props.solution} />,
+            Section: (
+              <SectionSelector
+                sections={sections}
+                selectedSection={sectionId}
+              />
+            )
+          }[selectedTab]
+        }
       </Container>
     );
   }

@@ -16,6 +16,7 @@ class Practice extends React.Component {
     sectionId: "default section",
     sectionName: "default name",
     sectionNumber: 0,
+    sections: [],
     problems: [],
     selectedProblem: null
   };
@@ -26,6 +27,7 @@ class Practice extends React.Component {
         sectionId: response.sectionId,
         sectionName: response.sectionName,
         sectionNumber: response.sectionNumber,
+        sections: response.sections,
         problems: response.problems,
         selectedProblem: 0
       })
@@ -37,6 +39,7 @@ class Practice extends React.Component {
       sectionId,
       sectionName,
       sectionNumber,
+      sections,
       problems,
       selectedProblem
     } = this.state;
@@ -53,6 +56,8 @@ class Practice extends React.Component {
           choices={problemData.choices}
           answer={problemData.answer}
           solution={problemData.solution}
+          sections={sections}
+          sectionId={sectionId}
         />
         <SectionInfo id={sectionId} name={sectionName} number={sectionNumber} />
       </Container>
