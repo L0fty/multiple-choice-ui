@@ -1,10 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 import Section from "./Section";
 
+const SectionContainer = styled.div`
+  overflow: auto;
+  margin: 16px;
+`;
 const SectionSelector = props => {
   const { sections = [], selectedSection } = props;
   return (
-    <React.Fragment>
+    <SectionContainer>
       {sections.map(section => (
         <Section
           selected={section.sectionId === selectedSection}
@@ -13,7 +18,7 @@ const SectionSelector = props => {
           key={section.sectionId}
         />
       ))}
-    </React.Fragment>
+    </SectionContainer>
   );
 };
 

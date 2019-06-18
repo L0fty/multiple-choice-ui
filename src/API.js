@@ -23,7 +23,12 @@ export const fetchProblems = () =>
         { sectionId: "3", sectionName: "fake", sectionNumber: 3 },
         { sectionId: "4", sectionName: "not real", sectionNumber: 4 },
         { sectionId: "5", sectionName: "fraud", sectionNumber: 5 },
-        { sectionId: "6", sectionName: "imposter", sectionNumber: 6 }
+        { sectionId: "6", sectionName: "imposter", sectionNumber: 6 },
+        { sectionId: "7", sectionName: "mock", sectionNumber: 7 },
+        { sectionId: "8", sectionName: "fake", sectionNumber: 8 },
+        { sectionId: "9", sectionName: "not real", sectionNumber: 9 },
+        { sectionId: "10", sectionName: "fraud", sectionNumber: 10 },
+        { sectionId: "11", sectionName: "imposter", sectionNumber: 11 }
       ]
     };
     resolve(data);
