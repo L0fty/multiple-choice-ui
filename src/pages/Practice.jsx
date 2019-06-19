@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { fetchProblems } from "../API";
 import SectionInfo from "../components/sectionInfo/SectionInfo";
 import Question from "../components/question/Question";
-import { ProblemSelector } from "../components/problemSelector/ProblemSelector";
+import ProblemSelector from "../components/problemSelector/ProblemSelector";
 import Folder from "../components/folder/Folder";
 
 const Container = styled.div`
@@ -34,6 +34,9 @@ class Practice extends React.Component {
     );
   }
 
+  handleProblemChange = problemId => {
+    this.setState({ selectedProblem: problemId });
+  };
   render() {
     const {
       sectionId,
@@ -47,7 +50,11 @@ class Practice extends React.Component {
     const problemData = problems[selectedProblem] || {};
     return (
       <Container>
-        <ProblemSelector problems={problems} />
+        <ProblemSelector
+          problems={problems}
+          selectedProblem={selectedProblem}
+          handleProblemChange={this.handleProblemChange}
+        />
         <Question
           question={problemData.question}
           problemNumber={selectedProblem}

@@ -11,6 +11,132 @@ export const fetchProblems = () =>
           choices: [0.47, 0.58, 0.83, 1.42, 2.58],
           answer: 0.58,
           solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 1,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 2,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 3,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 4,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 5,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 6,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 7,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 8,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 9,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 10,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 11,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 12,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 13,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 14,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 15,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 16,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 17,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
+        },
+        {
+          problemId: 18,
+          question: `Different Problem than first`,
+          choices: [0.47, 0.58, 0.83, 1.42, 2.58],
+          answer: 0.58,
+          solution: "a solution to your problem will go here"
         }
       ],
       sections: [
