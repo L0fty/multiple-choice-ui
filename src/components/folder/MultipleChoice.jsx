@@ -2,8 +2,6 @@ import React from "react";
 import Choice from "./Choice";
 import styled from "styled-components";
 
-const choices = [0.45, 0.56, 0.75, 0.8];
-
 const ChoiceContainer = styled.div`
   overflow: auto;
   margin: 16px;
@@ -28,7 +26,7 @@ const SubmitButton = styled.button`
 `;
 
 const MultipleChoice = props => {
-  const { selected, handleClick } = props;
+  const { selected, handleClick, goToSolution, answer, choices = [] } = props;
   const disableSubmit = selected === null;
   return (
     <>
@@ -43,7 +41,10 @@ const MultipleChoice = props => {
         ))}
       </ChoiceContainer>
 
-      <SubmitButton disable={disableSubmit}>
+      <SubmitButton
+        disable={disableSubmit}
+        onClick={() => (disableSubmit ? {} : goToSolution(selected === answer))}
+      >
         {disableSubmit ? "Select an option..." : "Check Answer"}
       </SubmitButton>
     </>

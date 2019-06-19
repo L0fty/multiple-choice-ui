@@ -29,6 +29,7 @@ class Folders extends React.Component {
   };
 
   state = {
+    answeredCorrectly: null,
     selectedTab: "Answer",
     selectedChoice: null
   };
@@ -37,27 +38,39 @@ class Folders extends React.Component {
     this.setState({ selectedChoice: choice });
   };
 
+  changeTab = tabName => {
+    this.setState({ selectedTab: tabName });
+  };
+
+  goToSolution = answeredCorrectly => {
+    this.setState({
+      selectedTab: "Solution",
+      answeredCorrectly: answeredCorrectly
+    });
+  };
+
   render() {
     const { selectedTab, selectedChoice } = this.state;
-    const { sections, sectionId } = this.props;
+    const { sections, sectionId, choices, answer } = this.props;
+
     return (
       <Container>
         <TabGroup>
           <Tab
             selected={selectedTab === "Answer"}
-            onClick={() => this.setState({ selectedTab: "Answer" })}
+            onClick={() => this.changeTab("Answer")}
           >
             Answer
           </Tab>
           <Tab
             selected={selectedTab === "Solution"}
-            onClick={() => this.setState({ selectedTab: "Solution" })}
+            onClick={() => this.changeTab("Solution")}
           >
             Solution
           </Tab>
           <Tab
             selected={selectedTab === "Section"}
-            onClick={() => this.setState({ selectedTab: "Section" })}
+            onClick={() => this.changeTab("Section")}
           >
             Section
           </Tab>
@@ -67,7 +80,10 @@ class Folders extends React.Component {
             Answer: (
               <MultipleChoice
                 selected={selectedChoice}
+                choices={choices}
                 handleClick={this.handleChoiceClick}
+                goToSolution={this.goToSolution}
+                answer={answer}
               />
             ),
             Solution: <Solution solution={this.props.solution} />,
