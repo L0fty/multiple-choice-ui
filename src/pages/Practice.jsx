@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { fetchProblems } from "../API";
-import SectionInfo from "../components/sectionInfo/SectionInfo";
 import Question from "../components/question/Question";
 import ProblemSelector from "../components/problemSelector/ProblemSelector";
 import Folder from "../components/folder/Folder";
@@ -38,12 +37,7 @@ class Practice extends React.Component {
     this.setState({ selectedProblem: problemId });
   };
   render() {
-    const {
-      sectionId,
-      sections,
-      problems,
-      selectedProblem
-    } = this.state;
+    const { sectionId, sections, problems, selectedProblem } = this.state;
 
     const problemData = problems[selectedProblem] || {};
     return (
