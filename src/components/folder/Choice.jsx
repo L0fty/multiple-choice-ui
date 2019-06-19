@@ -12,18 +12,14 @@ const OptionContainer = styled.button`
   flex-direction: row;
   box-shadow: 0px 0px 5px 1px
     ${props => (props.selected ? props.theme.secondary : props.theme.dark)};
+  border-left: 6px solid
+    ${props => (props.selected ? props.theme.complement : props.theme.dark)};
 
   &:hover {
     background-color: ${props => props.theme.lighter};
+    border-left: 6px solid
+      ${props => (props.selected ? props.theme.complement : props.theme.light)};
   }
-`;
-
-const ColorBar = styled.div`
-  background-color: ${props =>
-    props.selected ? props.theme.complement : props.theme.dark};
-  height: calc(5vh + 32px);
-  width: 6px;
-  border-radius: 2px;
 `;
 
 const ChoiceText = styled.span`
@@ -41,7 +37,6 @@ const Choice = props => {
       selected={selected}
       onClick={() => handleClick(selected ? null : option)}
     >
-      <ColorBar selected={selected} />
       <ChoiceText>{option}</ChoiceText>
     </OptionContainer>
   );

@@ -15,7 +15,9 @@ const ProblemPreview = styled.button`
   transition: border color 300ms ease;
   &:hover {
     background-color: ${props => props.theme.lighter};
-    border: 4px solid ${props => props.theme.lighter};
+    border: 4px solid
+      ${props =>
+        props.selected ? props.theme.complement : props.theme.lighter};
   }
 `;
 
