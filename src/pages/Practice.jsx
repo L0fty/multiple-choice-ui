@@ -40,8 +40,6 @@ class Practice extends React.Component {
   render() {
     const {
       sectionId,
-      sectionName,
-      sectionNumber,
       sections,
       problems,
       selectedProblem
@@ -66,7 +64,6 @@ class Practice extends React.Component {
           sections={sections}
           sectionId={sectionId}
         />
-        <SectionInfo id={sectionId} name={sectionName} number={sectionNumber} />
       </Container>
     );
   }

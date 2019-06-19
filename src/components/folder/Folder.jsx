@@ -10,7 +10,7 @@ const Container = styled.section`
   width: 40vw;
   margin: 1.5vh 0 1.5vh 10px;
   background-color: ${props => props.theme.dim};
-  height: 81vh;
+  height: 89vh;
   display: flex;
   flex-direction: column;
 `;

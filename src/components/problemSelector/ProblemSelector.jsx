@@ -4,7 +4,7 @@ import ProblemPreview from "./ProblemPreview";
 
 const ProblemSelectorContainer = styled.section`
   width: 10vw;
-  height: 81vh;
+  height: 89vh;
   margin: 1.5vh 10px 1.5vh 0;
   background-color: ${props => props.theme.dim};
   display: flex;
